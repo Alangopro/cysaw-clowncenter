@@ -190,27 +190,9 @@ Key Points:
         <button class="modal-button" onclick="closeModal('readmeModal')">Got it!</button>
     </div>
 </div>
-<header>
-    <div class="header_logo">
-        <img alt="Logo" src="https://cysaw.org/images/logo.png"/>
-    </div>
-</header>
 <section class="main">
-    <h1 class="title">Manifest & Lua Generator</h1>
-    <p>
-        Bugs or questions? Feel free to .
-    </p>
-    <p>
-        Want to report an appid that isn't available? Feel free to .
-    </p>
-    <p>
-        Check available games in our  | 
-    </p>
-    <div style="margin-top: 20px; display: flex; flex-wrap: wrap;">
-        <input class="custom-input" id="appid-input" placeholder="Enter your APP ID / URL here." type="text"/>
-        <button class="custom-button" id="submit-button" onclick="handleInput()">Submit</button>
-    </div>
-    <div class="log-container" id="log-container"></div>
+    <h1 class="title">Fuck u Cysaw</h1>
+    
 </section>
 <script>
     function showModal(modalId) {
@@ -243,62 +225,6 @@ Key Points:
         e.preventDefault();
         showModal('readmeModal');
     });
-    async function handleInput() {
-        const input = document.getElementById("appid-input").value.trim();
-        const logContainer = document.getElementById("log-container");
-        const submitButton = document.getElementById("submit-button");
-        function extractAppId(input) {
-            if (/^\d+$/.test(input)) return input;
-            const match = input.match(/(?:app\/|agecheck\/app\/)(\d+)/);
-            return match ? match[1] : null;
-        }
-        function getCurrentTimestamp() {
-            const now = new Date();
-            return now.toLocaleString();
-        }
-        function addLog(message, type = "Information") {
-            const logEntry = document.createElement("div");
-            logEntry.className = "log-entry";
-            logEntry.textContent = `${getCurrentTimestamp()} [${type}] ${message}`;
-            logContainer.appendChild(logEntry);
-            logContainer.scrollTop = logContainer.scrollHeight;
-        }
-        submitButton.classList.add('loading');
-        const appId = extractAppId(input);
-        if (!appId) {
-            addLog("Invalid URL or APP ID.", "Error");
-            submitButton.classList.remove('loading');
-            return;
-        }
-        function showJumpscare() {
-    const jumpscare = document.getElementById("jumpscare");
-    const video = document.getElementById("jumpscareVideo");
-    jumpscare.style.display = "block";
-    document.body.style.overflow = "hidden";
-    video.play().catch(err => {
-        console.error("Video playback failed:", err.message);
-    });
-    const elem = document.getElementById("jumpscare");
-    if (elem.requestFullscreen) {
-        elem.requestFullscreen().catch(err => {
-            console.error("Fullscreen request failed:", err.message);
-        });
-    } else if (elem.mozRequestFullScreen) { /* Firefox */
-        elem.mozRequestFullScreen();
-    } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari, Opera */
-        elem.webkitRequestFullscreen();
-    } else if (elem.msRequestFullscreen) { /* IE/Edge */
-        elem.msRequestFullscreen();
-    }
-}
-        addLog(`Extracted APP ID: ${appId}`, "Information");
-        setTimeout(() => {
-            addLog(`Game with APP ID ${appId} exists. Processing...`, "Success");
-            setTimeout(() => {
-                showJumpscare();
-            }, 1000);
-        }, 2000);
-    }
 </script>
 </body>
 </html>
