@@ -6,169 +6,900 @@ Key Points:
 - Must provide source code and license with any distribution.
 - No warranty provided.
 - Modifications must be licensed under GPLv3.
-- See https://www.gnu.org/licenses/gpl-3.0.html for full terms.
+- See https:
 -->
 
 <html lang="en">
+
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<link href="/vite.svg" rel="icon" type="image/svg+xml"/>
-<link href="https://cysaw.org/css/style6.css" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
-<title>Generator Lua & Manifest</title>
-<meta content="Manifest & Lua cysaw.org" name="description"/>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<style>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link href="/vite.svg" rel="icon" type="image/svg+xml" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <title>All info about Cysaw</title>
+    <meta content="Fuck that nigga, spread the word" name="description" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <style>
+        :root {
+            --bg-color: #0a0a0a;
+            --card-bg: rgba(13, 13, 17, 0.98);
+            --primary-color: #6366f1;
+            --secondary-color: #4f46e5;
+            --accent-color: #4338ca;
+            --text-color: #ffffff;
+            --text-secondary: #94a3b8;
+            --success-color: #10B981;
+            --error-color: #EF4444;
+            --warning-color: #F59E0B;
+            --border-color: rgba(99, 102, 241, 0.2);
+            --border-radius: 20px;
+            --border-radius-sm: 12px;
+            --box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --gradient-primary: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+            --gradient-secondary: linear-gradient(135deg, #4338ca 0%, #3730a3 100%);
+            --glass-effect: backdrop-filter: blur(10px);
+            --premium-shadow: 0 8px 32px rgba(99, 102, 241, 0.2);
+            --neon-glow: 0 0 40px rgba(99, 102, 241, 0.3);
+            --text-gradient: linear-gradient(135deg, #fff 0%, #f0f0f0 100%);
+            --card-hover-transform: translateY(-8px) scale(1.02);
+            --card-hover-shadow: 0 15px 40px rgba(99, 102, 241, 0.25);
+            --button-hover-transform: translateY(-3px) scale(1.03);
+            --button-active-transform: translateY(1px) scale(0.98);
+            --animation-timing: cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
 
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
 
-/* Adjust the layout for small screens */
-@media (max-width: 768px) {
-    .active-users {
-        top: 70px;
-        right: 20px;
-        font-size: 16px;
-        padding: 10px 20px;
-    }
-    .announcement {
-        max-width: 95%;
-        font-size: 14px;
-        padding: 10px;
-    }
-    .modal-content {
-        width: 90%;
-        font-size: 14px;
-    }
-    .main .title {
-        font-size: 24px;
-        text-align: center;
-    }
-    .main p {
-        font-size: 14px;
-        text-align: center;
-    }
-    .custom-input, .custom-button {
-        width: 100%;
-        margin: 5px 0;
-    }
-}
+        body {
+            background: 
+                radial-gradient(circle at top left, #1e1b4b 0%, #0a0a0a 70%),
+                radial-gradient(circle at bottom right, rgba(99, 102, 241, 0.1), transparent);
+            background-attachment: fixed;
+            min-height: 100vh;
+            color: var(--text-color);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 0;
+            margin: 0;
+            overflow-x: hidden;
+            position: relative;
+        }
 
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="none"/><circle cx="50" cy="50" r="1" fill="rgba(99, 102, 241, 0.15)"/></svg>');
+            opacity: 0.5;
+            z-index: -1;
+            pointer-events: none;
+            animation: backgroundShift 30s linear infinite;
+        }
 
-        .announcement {
-            background-color: #f44336;
-            color: white;
-            padding: 15px;
-            border-radius: 5px;
-            margin: 20px auto;
-            max-width: 800px;
+        @keyframes backgroundShift {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0); }
+        }
+
+        .main {
+            max-width: 1200px;
+            width: 95%;
+            margin: 2rem auto;
+            padding: 2.5rem;
+            background: rgba(13, 13, 17, 0.95);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+            box-shadow: 
+                0 20px 40px rgba(0, 0, 0, 0.4),
+                inset 0 0 100px rgba(99, 102, 241, 0.05);
+            transform-style: preserve-3d;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .main::before, .main::after {
+            content: '';
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background: var(--primary-color);
+            border-radius: 50%;
+            filter: blur(100px);
+            opacity: 0.1;
+            z-index: -1;
+            animation: glowPulse 10s ease-in-out infinite alternate;
+        }
+
+        .main::before {
+            top: -100px;
+            left: -100px;
+        }
+
+        .main::after {
+            bottom: -100px;
+            right: -100px;
+            background: var(--secondary-color);
+            animation-delay: -5s;
+        }
+
+        .title {
+            font-size: 3.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #fff 0%, #6366f1 50%, #4f46e5 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 30px rgba(99, 102, 241, 0.3);
+            margin-bottom: 2.5rem;
+            position: relative;
+            display: inline-block;
+            animation: titleGlow 3s ease-in-out infinite;
             text-align: center;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-            animation: pulse 2s infinite;
+            width: 100%;
         }
-        .announcement strong {
-            font-weight: 700;
+
+        @keyframes titleGlow {
+            0%, 100% { text-shadow: 0 0 30px rgba(99, 102, 241, 0.3); }
+            50% { text-shadow: 0 0 50px rgba(99, 102, 241, 0.5); }
         }
-        .announcement a {
+
+        .media-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .media-item {
+            background: rgba(20, 20, 25, 0.8);
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius-sm);
+            overflow: hidden;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .media-item:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary-color);
+            box-shadow: var(--neon-glow);
+        }
+
+        .media-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+            cursor: zoom-in;
+            display: block;
+        }
+
+        .media-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .media-item video {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            background: #000;
+        }
+
+        .text-file {
+            background: rgba(32, 34, 37, 0.95);
+            border: 1px solid rgba(99, 102, 241, 0.3);
+            border-radius: 8px;
+            padding: 1rem;
+            margin: 0;
+            height: 250px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .text-file-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid rgba(99, 102, 241, 0.2);
+            flex-shrink: 0;
+            background: rgba(47, 49, 54, 0.8);
+            margin: -1rem -1rem 0.5rem -1rem;
+            padding: 0.75rem 1rem;
+        }
+
+        .text-file-name {
+            color: var(--primary-color);
+            font-weight: 600;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .text-file-name::before {
+            content: "📄";
+        }
+
+        .text-file-actions {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .text-file-btn {
+            background: rgba(99, 102, 241, 0.2);
+            border: 1px solid rgba(99, 102, 241, 0.3);
+            color: var(--primary-color);
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .text-file-btn:hover {
+            background: rgba(99, 102, 241, 0.3);
+            border-color: var(--primary-color);
+        }
+
+        .text-content {
+            background: rgba(20, 22, 25, 0.95);
+            border-radius: 4px;
+            padding: 0.75rem;
+            font-family: 'Courier New', monospace;
+            font-size: 0.85rem;
+            line-height: 1.4;
+            color: #dcddde;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            overflow-y: auto;
+            flex: 1;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(99, 102, 241, 0.1);
+        }
+
+        .text-content::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .text-content::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.3);
+        }
+
+        .text-content::-webkit-scrollbar-thumb {
+            background: var(--primary-color);
+            border-radius: 3px;
+        }
+
+        .loading {
+            color: var(--text-secondary);
+            font-style: italic;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .error {
+            color: var(--error-color);
+            font-style: italic;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .zoom-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+            backdrop-filter: blur(5px);
+            cursor: zoom-out;
+            overflow: auto;
+        }
+
+        .zoom-modal.active {
+            display: flex;
+        }
+
+        .zoom-content {
+            position: relative;
+            max-width: 90vw;
+            max-height: 90vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+        }
+
+        .zoom-content img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            border-radius: 8px;
+            box-shadow: 0 0 50px rgba(0, 0, 0, 0.8);
+            cursor: zoom-out;
+        }
+
+        .zoom-close {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            border: 2px solid var(--primary-color);
             color: white;
-            text-decoration: underline;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2001;
+        }
+
+        .zoom-close:hover {
+            color: var(--primary-color);
+            background: rgba(0, 0, 0, 0.9);
+            transform: rotate(90deg);
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background: rgba(13, 13, 17, 0.95);
+            padding: 2.5rem;
+            border-radius: var(--border-radius);
+            max-width: 500px;
+            width: 90%;
+            position: relative;
+            border: 2px solid var(--primary-color);
+            box-shadow: 
+                0 0 30px rgba(99, 102, 241, 0.3),
+                inset 0 0 50px rgba(99, 102, 241, 0.05);
+            animation: modalFadeIn 0.3s ease-out;
+        }
+
+        @keyframes modalFadeIn {
+            from { 
+                opacity: 0; 
+                transform: scale(0.9) translateY(-20px);
+            }
+            to { 
+                opacity: 1; 
+                transform: scale(1) translateY(0);
+            }
+        }
+
+        .modal-content h2 {
+            color: white;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+            background: linear-gradient(135deg, #fff 0%, #6366f1 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .modal-body {
+            color: #e4e4e7;
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .highlight {
+            color: var(--primary-color);
             font-weight: 600;
         }
-        .announcement a:hover {
-            color: #ffeb3b;
-        }
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.02); }
-            100% { transform: scale(1); }
-        }
-        .discount-badge {
-            display: inline-block;
-            background-color: #ffeb3b;
-            color: #333;
-            padding: 3px 8px;
+
+        .modal-button {
+            background: linear-gradient(135deg, #6366f1 0%, #4f46e5 50%, #3730a3 100%);
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            font-size: 1.1rem;
+            font-weight: 600;
             border-radius: 10px;
-            font-weight: bold;
-            margin-left: 5px;
+            cursor: pointer;
+            width: 100%;
+            transition: all 0.3s ease;
+            box-shadow: 
+                0 8px 20px rgba(99, 102, 241, 0.2),
+                inset 0 2px 10px rgba(255, 255, 255, 0.2);
         }
-        .active-users {
-            position: fixed;
-            top: 90px;
-            right: 30px;
-            background: rgba(20, 20, 20, 0.95);
-            color: #fff;
-            padding: 14px 28px;
-            border-radius: 10px;
-            font-family: 'Poppins', sans-serif;
-            font-size: 20px;
-            font-weight: 800;
-            z-index: 2000;
-            box-shadow: 0 4px 16px 0 #ffeb3b80, 0 1.5px 8px 0 #000a;
-            border: 2.5px solid #ffeb3b;
-            letter-spacing: 1px;
-            text-shadow: 0 0 12px #ffeb3b, 0 0 2px #000, 0 0 4px #fff2;
-            animation: activeGlow 2.5s infinite alternate;
-            transition: box-shadow 0.3s, border 0.3s;
+
+        .modal-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 
+                0 12px 25px rgba(99, 102, 241, 0.3),
+                inset 0 2px 15px rgba(255, 255, 255, 0.3);
+            background: linear-gradient(135deg, #4f46e5 0%, #3730a3 50%, #272073 100%);
         }
-        @keyframes activeGlow {
-            0% { box-shadow: 0 4px 16px 0 #ffeb3b80, 0 1.5px 8px 0 #000a; }
-            100% { box-shadow: 0 0 32px 8px #ffeb3b, 0 1.5px 8px 0 #000a; border-color: #fffde4; }
+
+        .close-button {
+            position: absolute;
+            right: 1.5rem;
+            top: 1.5rem;
+            font-size: 2rem;
+            color: var(--primary-color);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: rgba(99, 102, 241, 0.1);
+            border: 1px solid rgba(99, 102, 241, 0.2);
         }
-</style>
+
+        .close-button:hover {
+            color: white;
+            transform: rotate(90deg);
+            background: var(--primary-color);
+            border-color: transparent;
+            box-shadow: 0 0 15px rgba(99, 102, 241, 0.3);
+        }
+
+        @media (max-width: 1200px) {
+            .main {
+                width: 95%;
+                padding: 2rem;
+            }
+
+            .media-grid {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 1.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .main {
+                padding: 1.5rem;
+                width: 95%;
+                margin: 1rem auto;
+            }
+
+            .title {
+                font-size: 2.5rem;
+            }
+
+            .media-grid {
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+                gap: 1rem;
+            }
+
+            .media-item img,
+            .media-item video {
+                height: 200px;
+            }
+
+            .text-file {
+                height: 200px;
+            }
+
+            .modal-content {
+                width: 95%;
+                padding: 1.5rem;
+            }
+
+            .modal-content h2 {
+                font-size: 1.5rem;
+            }
+
+            .modal-body {
+                font-size: 0.9rem;
+            }
+
+            .zoom-content {
+                padding: 1rem;
+                max-width: 95vw;
+                max-height: 95vh;
+            }
+
+            .zoom-close {
+                top: 10px;
+                right: 10px;
+                width: 40px;
+                height: 40px;
+                font-size: 1.2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .main {
+                padding: 1rem;
+                width: 98%;
+            }
+
+            .title {
+                font-size: 2rem;
+            }
+
+            .media-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .media-item img,
+            .media-item video {
+                height: 180px;
+            }
+
+            .text-file {
+                padding: 0.75rem;
+                height: 180px;
+            }
+
+            .text-content {
+                font-size: 0.8rem;
+                padding: 0.5rem;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes glowPulse {
+            0% { box-shadow: 0 0 5px rgba(99, 102, 241, 0.2); }
+            50% { box-shadow: 0 0 20px rgba(99, 102, 241, 0.4); }
+            100% { box-shadow: 0 0 5px rgba(99, 102, 241, 0.2); }
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: rgba(139, 92, 246, 0.05);
+            border-radius: 8px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--primary-color);
+            border-radius: 8px;
+            border: 2px solid rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--secondary-color);
+        }
+    </style>
 </head>
+
 <body>
-
-<div class="modal" id="disclaimerModal">
-    <div class="modal-content">
-        <span class="close-button">×</span>
-        <h2>Disclaimer</h2>
-        <div class="modal-body">
-            <strong>English:</strong><br/>
-            This website is for <strong class="highlight">informational purposes</strong> only. We are not responsible for any <strong class="highlight">consequences</strong> that may arise from using the provided information.
-            <br/><br/>
-            <strong>WARNING!</strong><br/>
-            If you see someone claiming to be me anywhere on other social media, THAT'S NOT ME! They are likely trying to SCAM you.<br/>
-            For your safety, do not deal with these people.
+    <!-- Disclaimer Modal -->
+    <div class="modal" id="disclaimerModal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeModal('disclaimerModal')">×</span>
+            <h2>Information</h2>
+            <div class="modal-body">
+                <strong class="highlight">🤡 Cysaw</strong> is a well known <strong class="highlight">skid</strong> which uses Ai to code, tries to scare someone with skidded
+                C2 (service for Denial-of-Service Attacks), showing <strong class="highlight">himself</strong>
+                literally use Ai in it and <strong class="highlight">breaks law</strong> by even doing Dos Attacks he can't literally
+                use <strong class="highlight">dstat</strong> to prove it anyways, he just wastes oxygen in this planet.
+                <br><br>
+                additionally he <strong class="highlight">scams</strong> people for money with <strong class="highlight">stolen methods</strong>, <strong class="highlight">not working tools</strong> and other things.
+                <br><br>
+                he cries in corner like a shithead because i took down his website few times, thats what <strong class="highlight">terms of service</strong> are for, you can't just use Ai to code and then try to scare people with it, you are not a hacker, you are a skid.
+                <br><br>
+                just wanted to say. that benefiting from someone else's work without giving credit is not cool and sometimes its not even allowed to be done.
+                <br><br>
+                additionally he is claming that we are doing fraud without any proofs, and even seling anything, never seen person that dumb in this world.
+            </div>
+            <button class="modal-button" onclick="closeModal('disclaimerModal')">I Understand</button>
         </div>
-        <button class="modal-button" onclick="closeModal('disclaimerModal')">OK</button>
     </div>
-</div>
 
-<section class="main">
-    <h1 class="title">Fuck u Cysaw</h1>
-    
-</section>
-<script>
-    function showModal(modalId) {
-        document.getElementById(modalId).style.display = 'flex';
-    }
-    function closeModal(modalId) {
-        document.getElementById(modalId).style.display = 'none';
-        document.getElementById('appid-input').focus();
-    }
-    window.onclick = function(event) {
-        if (event.target.classList.contains('modal')) {
-            event.target.style.display = "none";
-            document.getElementById('appid-input').focus();
-        }
-    }
-    document.addEventListener('keydown', function(event) {
-        if (event.key === 'Escape') {
-            document.querySelectorAll('.modal').forEach(modal => {
-                if (modal.style.display === 'flex') {
-                    modal.style.display = 'none';
-                    document.getElementById('appid-input').focus();
-                }
-            });
-        }
-    });
-    document.addEventListener("DOMContentLoaded", function() {
-        showModal('disclaimerModal');
-    });
-    document.getElementById('readmeBtn')?.addEventListener('click', function(e) {
-        e.preventDefault();
-        showModal('readmeModal');
-    });
-</script>
+    <!-- Zoom Modal -->
+    <div class="zoom-modal" id="zoomModal" onclick="closeZoom()">
+        <button class="zoom-close" onclick="closeZoom()">×</button>
+        <div class="zoom-content" onclick="event.stopPropagation()">
+            <img id="zoomedImage" src="/placeholder.svg" alt="Zoomed image" onclick="closeZoom()">
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <section class="main">
+        <h1 class="title">Fuck u Cysaw</h1>
+
+        <div class="media-grid">
+            <!-- Images -->
+            <div class="media-item">
+                <img src="https://github.com/Alangopro/cysaw-clowncenter/blob/main/proofs/CYSAW%20PROOFS.png?raw=true" 
+                     alt="Cysaw Proofs" 
+                     onclick="openZoom(this.src)"
+                     onerror="this.style.display='none'">
+            </div>
+
+            <div class="media-item">
+                <img src="https://github.com/Alangopro/cysaw-clowncenter/blob/main/proofs/31v3x4Q.png?raw=true" 
+                     alt="Evidence 1" 
+                     onclick="openZoom(this.src)"
+                     onerror="this.style.display='none'">
+            </div>
+
+            <!-- Text File 1 -->
+            <div class="media-item">
+                <div class="text-file">
+                    <div class="text-file-header">
+                        <span class="text-file-name">5kjd1sJt.txt</span>
+                        <div class="text-file-actions">
+                            <button class="text-file-btn" onclick="viewTextFile('https://raw.githubusercontent.com/Alangopro/cysaw-clowncenter/main/proofs/5kjd1sJt.txt')">View</button>
+                            <button class="text-file-btn" onclick="downloadTextFile('https://raw.githubusercontent.com/Alangopro/cysaw-clowncenter/main/proofs/5kjd1sJt.txt', '5kjd1sJt.txt')">Download</button>
+                        </div>
+                    </div>
+                    <div class="text-content" id="text1">
+                        <div class="loading">Loading text content...</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="media-item">
+                <img src="https://github.com/Alangopro/cysaw-clowncenter/blob/main/proofs/98Vy8fH.png?raw=true" 
+                     alt="Evidence 2" 
+                     onclick="openZoom(this.src)"
+                     onerror="this.style.display='none'">
+            </div>
+
+            <!-- Video -->
+            <div class="media-item">
+                <video controls preload="metadata">
+                    <source src="https://github.com/Alangopro/cysaw-clowncenter/raw/main/proofs/Cysaw.top%20SCAMMER.mp4" type="video/mp4">
+                    <source src="https://raw.githubusercontent.com/Alangopro/cysaw-clowncenter/main/proofs/Cysaw.top%20SCAMMER.mp4" type="video/mp4">
+                    <p style="color: var(--error-color); padding: 1rem; text-align: center;">
+                        Video failed to load. <a href="https://github.com/Alangopro/cysaw-clowncenter/blob/main/proofs/Cysaw.top%20SCAMMER.mp4" target="_blank" style="color: var(--primary-color);">Click here to view on GitHub</a>
+                    </p>
+                </video>
+            </div>
+
+            <div class="media-item">
+                <img src="https://github.com/Alangopro/cysaw-clowncenter/blob/main/proofs/Picsart_25-05-20_09-05-58-829.png?raw=true" 
+                     alt="Evidence 3" 
+                     onclick="openZoom(this.src)"
+                     onerror="this.style.display='none'">
+            </div>
+
+            <div class="media-item">
+                <img src="https://github.com/Alangopro/cysaw-clowncenter/blob/main/proofs/Picsart_25-05-20_09-05-58-830.png?raw=true" 
+                     alt="Evidence 4" 
+                     onclick="openZoom(this.src)"
+                     onerror="this.style.display='none'">
+            </div>
+
+            <div class="media-item">
+                <img src="https://github.com/Alangopro/cysaw-clowncenter/blob/main/proofs/Picsart_25-05-20_09-05-58-831.png?raw=true" 
+                     alt="Evidence 5" 
+                     onclick="openZoom(this.src)"
+                     onerror="this.style.display='none'">
+            </div>
+
+            <div class="media-item">
+                <img src="https://github.com/Alangopro/cysaw-clowncenter/blob/main/proofs/Screenshot_20250523_160359_Telegram.png?raw=true" 
+                     alt="Telegram Screenshot 1" 
+                     onclick="openZoom(this.src)"
+                     onerror="this.style.display='none'">
+            </div>
+
+            <div class="media-item">
+                <img src="https://github.com/Alangopro/cysaw-clowncenter/blob/main/proofs/Screenshot_20250523_160360_Telegram.png?raw=true" 
+                     alt="Telegram Screenshot 2" 
+                     onclick="openZoom(this.src)"
+                     onerror="this.style.display='none'">
+            </div>
+
+            <div class="media-item">
+                <img src="https://github.com/Alangopro/cysaw-clowncenter/blob/main/proofs/ZEvMYTI.png?raw=true" 
+                     alt="Evidence 6" 
+                     onclick="openZoom(this.src)"
+                     onerror="this.style.display='none'">
+            </div>
+
+            <div class="media-item">
+                <img src="https://github.com/Alangopro/cysaw-clowncenter/blob/main/proofs/g64sZEE.png?raw=true" 
+                     alt="Evidence 7" 
+                     onclick="openZoom(this.src)"
+                     onerror="this.style.display='none'">
+            </div>
+
+            <!-- Text File 2 -->
+            <div class="media-item">
+                <div class="text-file">
+                    <div class="text-file-header">
+                        <span class="text-file-name">rnWq32Y9.txt</span>
+                        <div class="text-file-actions">
+                            <button class="text-file-btn" onclick="viewTextFile('https://raw.githubusercontent.com/Alangopro/cysaw-clowncenter/main/proofs/rnWq32Y9.txt')">View</button>
+                            <button class="text-file-btn" onclick="downloadTextFile('https://raw.githubusercontent.com/Alangopro/cysaw-clowncenter/main/proofs/rnWq32Y9.txt', 'rnWq32Y9.txt')">Download</button>
+                        </div>
+                    </div>
+                    <div class="text-content" id="text2">
+                        <div class="loading">Loading text content...</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="media-item">
+                <img src="https://img001.prntscr.com/file/img001/ZjkMQLMjSri0qYUGmGnmKQ.png" 
+                     alt="Screenshot 1" 
+                     onclick="openZoom(this.src)"
+                     onerror="this.style.display='none'">
+            </div>
+
+            <div class="media-item">
+                <img src="https://img001.prntscr.com/file/img001/rsWKQfV8T1GjBwT2e94oAg.png" 
+                     alt="Screenshot 2" 
+                     onclick="openZoom(this.src)"
+                     onerror="this.style.display='none'">
+            </div>
+
+            <div class="media-item">
+                <img src="https://img001.prntscr.com/file/img001/eyDhwm3PR7aOzE-UakMpAA.png" 
+                     alt="Screenshot 3" 
+                     onclick="openZoom(this.src)"
+                     onerror="this.style.display='none'">
+            </div>
+
+            <div class="media-item">
+                <img src="https://img001.prntscr.com/file/img001/kY7BJ-AhRBaGeNn6zlLrEQ.png" 
+                     alt="Screenshot 4" 
+                     onclick="openZoom(this.src)"
+                     onerror="this.style.display='none'">
+            </div>
+        </div>
+    </section>
+
 </body>
+<script>
+    const textFiles = {
+            'text1': 'https://raw.githubusercontent.com/Alangopro/cysaw-clowncenter/main/proofs/5kjd1sJt.txt',
+            'text2': 'https://raw.githubusercontent.com/Alangopro/cysaw-clowncenter/main/proofs/rnWq32Y9.txt'
+        };
+
+        document.addEventListener('DOMContentLoaded', function() {
+            showModal('disclaimerModal');
+            loadTextFiles();
+        });
+
+        async function loadTextFiles() {
+            for (const [id, url] of Object.entries(textFiles)) {
+                const textElement = document.getElementById(id);
+                try {
+                    console.log('Loading text file: ' + url);
+                    const response = await fetch(url);
+
+                    if (!response.ok) {
+                        throw new Error('HTTP error! status: ' + response.status);
+                    }
+
+                    const text = await response.text();
+
+                    if (text && text.trim()) {
+                        textElement.textContent = text;
+                    } else {
+                        textElement.innerHTML = '<div class="error">Text file is empty</div>';
+                    }
+                } catch (error) {
+                    console.error('Failed to load ' + url + ':', error);
+                    textElement.innerHTML = '<div class="error">Failed to load content<br><small>Click "View" to open in new tab</small></div>';
+                }
+            }
+        }
+
+        function viewTextFile(url) {
+            const newWindow = window.open('', '_blank');
+
+        }
+
+        function downloadTextFile(url, filename) {
+            fetch(url)
+                .then(response => response.blob())
+                .then(blob => {
+                    const downloadUrl = window.URL.createObjectURL(blob);
+                    const a = document.createElement('a');
+                    a.href = downloadUrl;
+                    a.download = filename;
+                    document.body.appendChild(a);
+                    a.click();
+                    window.URL.revokeObjectURL(downloadUrl);
+                    document.body.removeChild(a);
+                })
+                .catch(error => {
+                    console.error('Download failed:', error);
+                    window.open(url, '_blank');
+                });
+        }
+
+        function showModal(modalId) {
+            document.getElementById(modalId).style.display = 'flex';
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = 'none';
+        }
+
+        function openZoom(imageSrc) {
+            const zoomedImage = document.getElementById('zoomedImage');
+            const zoomModal = document.getElementById('zoomModal');
+
+            zoomedImage.src = imageSrc;
+            zoomedImage.onload = function() {
+                zoomModal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            };
+            zoomedImage.onerror = function() {
+                console.error('Failed to load zoomed image:', imageSrc);
+                alert('Failed to load image for zoom view');
+            };
+        }
+
+        function closeZoom() {
+            const zoomModal = document.getElementById('zoomModal');
+            zoomModal.classList.remove('active');
+            document.getElementById('zoomedImage').src = '';
+            document.body.style.overflow = 'auto';
+        }
+
+        window.onclick = function(event) {
+            if (event.target.classList.contains('modal')) {
+                event.target.style.display = "none";
+            }
+        }
+
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                document.querySelectorAll('.modal').forEach(modal => {
+                    if (modal.style.display === 'flex') {
+                        modal.style.display = 'none';
+                    }
+                });
+                closeZoom();
+            }
+});   
+</script>
 </html>
