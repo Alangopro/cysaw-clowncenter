@@ -1,0 +1,559 @@
+============================================================
+DM Chat Dump
+============================================================
+User      : andreawt (ID: 1084184304638242906)
+Timestamp : 2025-05-06 22:06:41.681808
+Filters   : Attachments Only = False, Attachment Type = , Limit = None
+------------------------------------------------------------
+
+Message ID : 1369387103976423474
+Time       : 2025-05-06 18:55:27.570000+00:00
+Author     : andreawt (ID: 1084184304638242906)
+Content    :
+
+[No Text]
+
+Attachments:
+    - https://cdn.discordapp.com/attachments/1369376668690415719/1369387103753994291/image.png?ex=681bac9f&is=681a5b1f&hm=c59e72fd8f1a47e29bbfc45be3daf81bfe91cab8273056e24fd473d4681a084c&
+
+------------------------------------------------------------
+
+Message ID : 1369387094077866155
+Time       : 2025-05-06 18:55:25.210000+00:00
+Author     : andreawt (ID: 1084184304638242906)
+Content    :
+
+thank u love
+
+Attachments: [None]
+
+------------------------------------------------------------
+
+Message ID : 1369379367683227788
+Time       : 2025-05-06 18:24:43.094000+00:00
+Author     : andreawt (ID: 1084184304638242906)
+Content    :
+
+Let me make u a list
+
+Attachments: [None]
+
+------------------------------------------------------------
+
+Message ID : 1369379351690215576
+Time       : 2025-05-06 18:24:39.281000+00:00
+Author     : andreawt (ID: 1084184304638242906)
+Content    :
+
+Okay
+
+Attachments: [None]
+
+------------------------------------------------------------
+
+Message ID : 1369379182236405871
+Time       : 2025-05-06 18:23:58.880000+00:00
+Author     : kamerzystanasyt_ (ID: 1201922581473804318)
+Content    :
+
+i use paypal
+
+Attachments: [None]
+
+------------------------------------------------------------
+
+Message ID : 1369379174447448086
+Time       : 2025-05-06 18:23:57.023000+00:00
+Author     : kamerzystanasyt_ (ID: 1201922581473804318)
+Content    :
+
+i dont use revolut
+
+Attachments: [None]
+
+------------------------------------------------------------
+
+Message ID : 1369379159096430592
+Time       : 2025-05-06 18:23:53.363000+00:00
+Author     : andreawt (ID: 1084184304638242906)
+Content    :
+
+[No Text]
+
+Attachments:
+    - https://cdn.discordapp.com/attachments/1369376668690415719/1369379158853156894/image0.png?ex=681ba539&is=681a53b9&hm=9d05fed3a0229a67933421864c021ecbf721c77ba71c0805bc2079cddbeaa4db&
+
+------------------------------------------------------------
+
+Message ID : 1369379145729183765
+Time       : 2025-05-06 18:23:50.176000+00:00
+Author     : andreawt (ID: 1084184304638242906)
+Content    :
+
+U get revolut?
+
+Attachments: [None]
+
+------------------------------------------------------------
+
+Message ID : 1369379124837093388
+Time       : 2025-05-06 18:23:45.195000+00:00
+Author     : andreawt (ID: 1084184304638242906)
+Content    :
+
+Okay
+
+Attachments: [None]
+
+------------------------------------------------------------
+
+Message ID : 1369378791708950601
+Time       : 2025-05-06 18:22:25.771000+00:00
+Author     : kamerzystanasyt_ (ID: 1201922581473804318)
+Content    :
+
+yes but i need to write the site so give me the list of things it needs to have
+
+Attachments: [None]
+
+------------------------------------------------------------
+
+Message ID : 1369378682702925834
+Time       : 2025-05-06 18:21:59.782000+00:00
+Author     : andreawt (ID: 1084184304638242906)
+Content    :
+
+lmfao
+
+Attachments: [None]
+
+------------------------------------------------------------
+
+Message ID : 1369378677137080480
+Time       : 2025-05-06 18:21:58.455000+00:00
+Author     : andreawt (ID: 1084184304638242906)
+Content    :
+
+I have so much ppl that want
+
+Attachments: [None]
+
+------------------------------------------------------------
+
+Message ID : 1369378642760564886
+Time       : 2025-05-06 18:21:50.259000+00:00
+Author     : andreawt (ID: 1084184304638242906)
+Content    :
+
+U first send the source code or?
+
+Attachments: [None]
+
+------------------------------------------------------------
+
+Message ID : 1369378563937013861
+Time       : 2025-05-06 18:21:31.466000+00:00
+Author     : andreawt (ID: 1084184304638242906)
+Content    :
+
+uh
+
+Attachments: [None]
+
+------------------------------------------------------------
+
+Message ID : 1369378551731851415
+Time       : 2025-05-06 18:21:28.556000+00:00
+Author     : kamerzystanasyt_ (ID: 1201922581473804318)
+Content    :
+
+2d
+
+Attachments: [None]
+
+------------------------------------------------------------
+
+Message ID : 1369378539530617044
+Time       : 2025-05-06 18:21:25.647000+00:00
+Author     : andreawt (ID: 1084184304638242906)
+Content    :
+
+Like i will make a list
+
+Attachments: [None]
+
+------------------------------------------------------------
+
+Message ID : 1369378520932941946
+Time       : 2025-05-06 18:21:21.213000+00:00
+Author     : andreawt (ID: 1084184304638242906)
+Content    :
+
+How much time take u?
+
+Attachments: [None]
+
+------------------------------------------------------------
+
+Message ID : 1369378466465841295
+Time       : 2025-05-06 18:21:08.227000+00:00
+Author     : andreawt (ID: 1084184304638242906)
+Content    :
+
+But i understand
+
+Attachments: [None]
+
+------------------------------------------------------------
+
+Message ID : 1369378457468932137
+Time       : 2025-05-06 18:21:06.082000+00:00
+Author     : kamerzystanasyt_ (ID: 1201922581473804318)
+Content    :
+
+but i need to write the site first
+
+Attachments: [None]
+
+------------------------------------------------------------
+
+Message ID : 1369378441165668552
+Time       : 2025-05-06 18:21:02.195000+00:00
+Author     : andreawt (ID: 1084184304638242906)
+Content    :
+
+I can t trust ppl on servers that tried to nuke my server srry
+
+Attachments: [None]
+
+------------------------------------------------------------
+
+Message ID : 1369378382445412452
+Time       : 2025-05-06 18:20:48.195000+00:00
+Author     : andreawt (ID: 1084184304638242906)
+Content    :
+
+i give u first the money or u send me the source?
+
+Attachments: [None]
+
+------------------------------------------------------------
+
+Message ID : 1369378345678012476
+Time       : 2025-05-06 18:20:39.429000+00:00
+Author     : andreawt (ID: 1084184304638242906)
+Content    :
+
+xD
+
+Attachments: [None]
+
+------------------------------------------------------------
+
+Message ID : 1369378111707283558
+Time       : 2025-05-06 18:19:43.646000+00:00
+Author     : kamerzystanasyt_ (ID: 1201922581473804318)
+Content    :
+
+nothing
+
+Attachments: [None]
+
+------------------------------------------------------------
+
+Message ID : 1369378088378564730
+Time       : 2025-05-06 18:19:38.084000+00:00
+Author     : andreawt (ID: 1084184304638242906)
+Content    :
+
+How much redcat paid u?
+
+Attachments: [None]
+
+------------------------------------------------------------
+
+Message ID : 1369378010549194793
+Time       : 2025-05-06 18:19:19.528000+00:00
+Author     : kamerzystanasyt_ (ID: 1201922581473804318)
+Content    :
+
+yes
+
+Attachments: [None]
+
+------------------------------------------------------------
+
+Message ID : 1369377967943323821
+Time       : 2025-05-06 18:19:09.370000+00:00
+Author     : andreawt (ID: 1084184304638242906)
+Content    :
+
+18 usd right?
+
+Attachments: [None]
+
+------------------------------------------------------------
+
+Message ID : 1369377608336281600
+Time       : 2025-05-06 18:17:43.633000+00:00
+Author     : kamerzystanasyt_ (ID: 1201922581473804318)
+Content    :
+
+[No Text]
+
+Replying to:
+    Message ID : 1369377418153951252
+    Author     : andreawt (ID: 1084184304638242906)
+    Content    :
+        Just give me some proof projects etc
+Attachments:
+    - https://cdn.discordapp.com/attachments/1369376668690415719/1369377606914277416/fRnLAiZ2.png?ex=681ba3c7&is=681a5247&hm=1de7722e9501cbdd88051d5d7c9bc3e8125ca55afed26f9e1ee76f96f469d7d2&
+    - https://cdn.discordapp.com/attachments/1369376668690415719/1369377607266865222/PzH8CZuo.png?ex=681ba3c7&is=681a5247&hm=5f96c296ea79bad1a5669699d0ad073e3a930dba9f9885ee5b4026ad3f005f29&
+    - https://cdn.discordapp.com/attachments/1369376668690415719/1369377607564656690/5Vy4rSZb.png?ex=681ba3c7&is=681a5247&hm=39ce4f101854daed97ec2966fc75cd24398ca4103e9e9a689f8f70ff042c0db2&
+    - https://cdn.discordapp.com/attachments/1369376668690415719/1369377607962857543/jVYPGKsp.png?ex=681ba3c7&is=681a5247&hm=d374bd4ef58a9a0f29c54db3a3b76c0c68e27b15c5b5be217e2b6003dbfb9794&
+
+------------------------------------------------------------
+
+Message ID : 1369377418153951252
+Time       : 2025-05-06 18:16:58.290000+00:00
+Author     : andreawt (ID: 1084184304638242906)
+Content    :
+
+Just give me some proof projects etc
+
+Attachments: [None]
+
+------------------------------------------------------------
+
+Message ID : 1369377379977527336
+Time       : 2025-05-06 18:16:49.188000+00:00
+Author     : andreawt (ID: 1084184304638242906)
+Content    :
+
+Sounds good
+
+Attachments: [None]
+
+------------------------------------------------------------
+
+Message ID : 1369377367088431145
+Time       : 2025-05-06 18:16:46.115000+00:00
+Author     : andreawt (ID: 1084184304638242906)
+Content    :
+
+18 usd
+
+Attachments: [None]
+
+------------------------------------------------------------
+
+Message ID : 1369377307696824441
+Time       : 2025-05-06 18:16:31.955000+00:00
+Author     : kamerzystanasyt_ (ID: 1201922581473804318)
+Content    :
+
+in usd
+
+Attachments:
+    - https://cdn.discordapp.com/attachments/1369376668690415719/1369377307512537129/vjS9bPZb.png?ex=681ba37f&is=681a51ff&hm=08d5f426acea7b88c0a2ef69142faf2ab838c2e3be259c5e611af35f9456534c&
+
+------------------------------------------------------------
+
+Message ID : 1369377214868488222
+Time       : 2025-05-06 18:16:09.823000+00:00
+Author     : andreawt (ID: 1084184304638242906)
+Content    :
+
+But i just want to know how much u charge
+
+Attachments: [None]
+
+------------------------------------------------------------
+
+Message ID : 1369377178034110574
+Time       : 2025-05-06 18:16:01.041000+00:00
+Author     : andreawt (ID: 1084184304638242906)
+Content    :
+
+I have much money xD
+
+Attachments: [None]
+
+------------------------------------------------------------
+
+Message ID : 1369377137244639262
+Time       : 2025-05-06 18:15:51.316000+00:00
+Author     : kamerzystanasyt_ (ID: 1201922581473804318)
+Content    :
+
+how much do you have
+
+Attachments: [None]
+
+------------------------------------------------------------
+
+Message ID : 1369377117086679151
+Time       : 2025-05-06 18:15:46.510000+00:00
+Author     : andreawt (ID: 1084184304638242906)
+Content    :
+
+How much u charge?
+
+Attachments: [None]
+
+------------------------------------------------------------
+
+Message ID : 1369377102801014975
+Time       : 2025-05-06 18:15:43.104000+00:00
+Author     : andreawt (ID: 1084184304638242906)
+Content    :
+
+Okay
+
+Attachments: [None]
+
+------------------------------------------------------------
+
+Message ID : 1369377085944234065
+Time       : 2025-05-06 18:15:39.085000+00:00
+Author     : kamerzystanasyt_ (ID: 1201922581473804318)
+Content    :
+
+yes
+
+Attachments: [None]
+
+------------------------------------------------------------
+
+Message ID : 1369377071960166490
+Time       : 2025-05-06 18:15:35.751000+00:00
+Author     : andreawt (ID: 1084184304638242906)
+Content    :
+
+The website?
+
+Attachments: [None]
+
+------------------------------------------------------------
+
+Message ID : 1369377036149461072
+Time       : 2025-05-06 18:15:27.213000+00:00
+Author     : kamerzystanasyt_ (ID: 1201922581473804318)
+Content    :
+
+i wrote the apps site and bot
+
+Attachments: [None]
+
+------------------------------------------------------------
+
+Message ID : 1369377004771737633
+Time       : 2025-05-06 18:15:19.732000+00:00
+Author     : andreawt (ID: 1084184304638242906)
+Content    :
+
+Whym?
+
+Attachments: [None]
+
+------------------------------------------------------------
+
+Message ID : 1369376970575577120
+Time       : 2025-05-06 18:15:11.579000+00:00
+Author     : kamerzystanasyt_ (ID: 1201922581473804318)
+Content    :
+
+dev of its services
+
+Replying to:
+    Message ID : 1369376887314452500
+    Author     : andreawt (ID: 1084184304638242906)
+    Content    :
+        U are the creator for ghostdepots?
+Attachments: [None]
+
+------------------------------------------------------------
+
+Message ID : 1369376913629642844
+Time       : 2025-05-06 18:14:58.002000+00:00
+Author     : andreawt (ID: 1084184304638242906)
+Content    :
+
+?
+
+Attachments: [None]
+
+------------------------------------------------------------
+
+Message ID : 1369376910110363740
+Time       : 2025-05-06 18:14:57.163000+00:00
+Author     : andreawt (ID: 1084184304638242906)
+Content    :
+
+The web developer i think
+
+Attachments: [None]
+
+------------------------------------------------------------
+
+Message ID : 1369376887314452500
+Time       : 2025-05-06 18:14:51.728000+00:00
+Author     : andreawt (ID: 1084184304638242906)
+Content    :
+
+U are the creator for ghostdepots?
+
+Attachments: [None]
+
+------------------------------------------------------------
+
+Message ID : 1369376856708485230
+Time       : 2025-05-06 18:14:44.431000+00:00
+Author     : andreawt (ID: 1084184304638242906)
+Content    :
+
+for cysaw.org
+
+Attachments: [None]
+
+------------------------------------------------------------
+
+Message ID : 1369376813981106207
+Time       : 2025-05-06 18:14:34.244000+00:00
+Author     : kamerzystanasyt_ (ID: 1201922581473804318)
+Content    :
+
+what site do  you need
+
+Attachments: [None]
+
+------------------------------------------------------------
+
+Message ID : 1369376790992388116
+Time       : 2025-05-06 18:14:28.763000+00:00
+Author     : andreawt (ID: 1084184304638242906)
+Content    :
+
+Yea
+
+Attachments: [None]
+
+------------------------------------------------------------
+
+Message ID : 1369376694414344322
+Time       : 2025-05-06 18:14:05.737000+00:00
+Author     : kamerzystanasyt_ (ID: 1201922581473804318)
+Content    :
+
+u still need web dev?
+
+Attachments: [None]
+
+------------------------------------------------------------
+
+
+============================================================
+Dump Complete
+Total messages processed: 48
+Total messages dumped   : 48
+============================================================
