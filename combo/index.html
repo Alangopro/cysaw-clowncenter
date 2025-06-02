@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Combo Formatter</title>
+  <style>
+    body {
+      font-family: monospace;
+      background: #121212;
+      color: #fff;
+      padding: 20px;
+    }
+    textarea {
+      width: 100%;
+      height: 300px;
+      background: #1e1e1e;
+      color: #0f0;
+      padding: 10px;
+      border: none;
+      resize: vertical;
+    }
+    button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      background: #00c853;
+      border: none;
+      color: white;
+      cursor: pointer;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h2>Combo Formatter</h2>
+  <textarea id="input" placeholder="Paste your combo list here..."></textarea><br>
+  <button onclick="openRaw()">View Raw</button>
+
+  <script>
+    function openRaw() {
+      const rawInput = document.getElementById("input").value;
+      const lines = rawInput.split('\n');
+      const cleaned = lines.map(line => line.split(' | ')[0].trim()).filter(Boolean).join('\n');
+      const win = window.open("", "_blank");
+      win.document.write(`<pre>${cleaned}</pre>`);
+    }
+  </script>
+</body>
+</html>
