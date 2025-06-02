@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Checked Account Info Extractor</title>
+  <style>
+    body {
+      background: #111;
+      color: #eee;
+      font-family: sans-serif;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    textarea {
+      width: 90%;
+      height: 150px;
+      margin-bottom: 1rem;
+      background: #222;
+      color: #0f0;
+      border: 1px solid #444;
+      padding: 10px;
+      font-family: monospace;
+    }
+    button {
+      margin: 0.5rem;
+      padding: 10px 20px;
+      font-size: 1rem;
+      background: #333;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>🔍 Extract Full Info of Checked Accounts</h2>
+
+  <textarea id="checked" placeholder="Paste your CHECKED accounts here (user:pass)"></textarea>
+  <textarea id="combo" placeholder="Paste the FULL COMBO list here (user:pass | extra info)"></textarea>
+
+  <div>
+    <button onclick="extractInfo()">Extract Info</button>
+    <button onclick="viewRaw()">View Raw</button>
+  </div>
+
+  <textarea id="output" placeholder="Matched lines with extra info will show here..."></textarea>
+
+  <script>
+    function extractInfo() {
+      const checked = document.getElementById('checked').value.split('\n').map(x => x.trim()).filter(Boolean);
+      const combo = document.getElementById('combo').value.split('\n');
+      const set = new Set(checked);
+      const matched = combo.filter(line => {
+        const match = line.match(/^([^:\s]+:[^\s|]+)/);
+        return match && set.has(match[1]);
+      });
+      document.getElementById('output').value = matched.join('\n');
+    }
+
+    function viewRaw() {
+      const result = document.getElementById('output').value;
+      const newTab = window.open();
+      newTab.document.write('<pre>' + result.replace(/</g, '&lt;').replace(/>/g, '&gt;') + '</pre>');
+      newTab.document.close();
+    }
+  </script>
+
+</body>
+</html>
