@@ -43,6 +43,10 @@ This repo hosts **full evidence** against the scammer, including:
 Explore the full collection of files and evidence here:  
 [/proofs](https://github.com/Alangopro/cysaw-clowncenter/tree/main/proofs)
 
+Proof of his "fake" software being mallicius:
+<p></p>
+
+[![Any.Run](https://img.shields.io/badge/Any.Run-Analysis-orange?logo=virustotal&logoColor=white)](https://app.any.run/tasks/64983db1-ddde-4846-9796-5787283c36ee) https://app.any.run/tasks/b1489ce7-38b9-495f-854b-9e560f808911
 ---
 
 ## How You Can Help 🤝
